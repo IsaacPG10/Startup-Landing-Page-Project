@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Meta tags are important for things such as page responsiveness, especially on mobile devices.-->
+    <title>Startup</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <!--Adobe Fonts-->
+    <link rel="stylesheet" href="https://use.typekit.net/pcu1ujf.css">
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <!--Below in the headline h1, I've used a bootstrap class. So with that name it'll be styled as in the bootstrap file. I'll do the same with the button except I'll change the name to add my own customizations such as color.-->
+    <div class="container d-flex align-items-center h-100"> <!--enables flexbox within bootstrap. Professor Z teaching me developer wisdom in debugging. This wouldn't work as intended without h-100. What i had to do was inspect the page and see that the container only targets the top part of the page, not the entire body. So to have everything in the container centered to the middle of the page vertically, I needed to add h-100 based on the height of the body that we can see in the css. Developer tools and thinking outside the box (literally) is key!-->
+      <div class="row">
+        <header class="text-center col-12 center-hr"> <!--bootstrap class that centers text-->
+          <h1 class="text-uppercase" id="headline">The biggest startup 
+          event of the year</h1>
+          <!--Adds emphasis, makes it bold...<strong>, removed it.-->
+        </header>
+        <div class="buffer col-12">
+          <!--col-12 makes sure it covers entire area. I want to make a buffer of space between the text and the button.-->
+          <!--The buffer is empty but the value is in the css-->
+        </div>
+        <section class="text-center col-12"> <!--If I open developer tools and inspect the elements, the section isn't taking up the full length of the container. So I need to tell the computer "hey I want to contain or expand along the column. Since bootstrap has a 12 grid system I can say I want a 12 column header and 12 column section. So now inspecting I can see the section and header taking up the full width of the container as they should.-->
+            <hr><!--hr;horizontal rule; creates a line. Like a break-->
+          <a href="https://mailchi.mp/c2ecfb238fff/startuptest"> 
+            <button type="button" class="btn btn-primary-xl">Find out 
+          more</button> 
+          </a>
+        </section>
+      </div>
+    </div>
+    <!--When lining up my content using the bootstrap grid, it's important to have my content inside a container. (div with class of container). h1,hr, and the button will be wrapped within a row. It's like making a burrito; put the content in a container, wrap it in a row-->
+    
+
+
+    
+    <script src="script.js"></script>
+    <!--Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+
+</html>

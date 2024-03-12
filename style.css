@@ -1,0 +1,82 @@
+/*CSS Google fonts*/
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Montserrat', 'Montserrat Alternates', sans-serif;
+  /*https://css-tricks.com/perfect-full-page-background-image/*/
+  background: url(https://i.pcmag.com/imagery/articles/00L79RtBGxsdnfRY8KKCxwy-1.fit_lim.size_1600x900.v1697409182.jpg) no-repeat center center fixed; 
+  /*The key is these lines, don't repeat the image, keep it centered, and keep it fixed. So the entire page stays as the image.*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#headline{
+  font-family: 'Montserrat', 'Montserrat Alternates', sans-serif;
+  font-size: 3rem; /*root-em; dictate an element's font size relative to the size of the root element*/
+  color: #e2dbdb;/*This is the "hex" of a color*/
+}
+
+.btn{
+  font-weight: 300;
+  border-radius: 300px; /*makes button rounder*/
+  text-transform: uppercase;
+}
+.btn-primary {
+  background-color: #F05F44;
+}
+.btn-xl {
+  padding: 1rem /*sides*/ 2em /*top/bottom*/; /*Makes button larger*/
+}
+
+/*The .btn classes above are not making the button look as it should.*/
+.btn.btn-primary-xl{
+  background-color: #F05F44;
+  color:white;
+  font-family: 'Montserrat', sans-serif;
+  padding: 1rem 2rem;
+  font-weight: 200;
+  border-radius: 300px;
+  text-transform: uppercase;
+  border-color: #F05F44;
+  transition: all 0.08s ease;
+}
+
+.btn.btn-primary-xl:hover{
+  background-color: #ee4b08;
+  border-color: #ee4b08;
+  border-width: 4px; /*makes the button slightly bigger*/
+}
+
+.center-hr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*hr is horizontal line*/
+hr{
+  border: 1px solid #F05F44 !important; 
+  border-color: #F05F44 !important;
+  border-width: 3px !important;
+  margin: 20px auto !important;
+  max-width: 65px;
+  opacity: 1 !important;
+}
+  /*margin is space outside an element, padding is space within an element*. auto automatically centers it horizontally within it's container. all four margins are 20px. (top/bottom/right/left/
+}
+/* hr {
+  border: 1px solid #F05F44 !important;
+  border-color: #F05F44;
+  border-width: 3px;
+  margin: 20px auto;
+  max-width: 65px; /*maximum width of the line*/
+  /* border-style: solid; /* Consolidate border styles */
+  /* } */
+
+/*The !important declaration is used here to give these styles higher specificity and priority over other styles that might be affecting the <hr>. I needed to use !inportant because this line was NOT appearing at all*/
+
+.buffer{
+  height: 10rem;
+}
